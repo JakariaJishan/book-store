@@ -1,8 +1,8 @@
 <a name="readme-top"></a>
 
 <div align="center">
-   <h1><b>Calculator</b></h1>
-  <!-- <img src="./src/assets/readme_img.png" alt="calculator image" width="100%" /> -->
+   <h1><b>Book store</b></h1>
+  <!-- <img src="./src/assets/readme_img.png" alt="book store image" width="100%" /> -->
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -31,9 +31,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Calculator <a name="about-project"></a>
+# 📖 Book store <a name="about-project"></a>
 
-**Calculator react** is a webapp built using React.
+**Book store** is a webapp built using React and Redux.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -70,7 +70,7 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Calculator is currently on construction so it does not have features yet.**
+- **Book store is currently on construction so it does not have features yet.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -103,7 +103,7 @@ Clone this repository in the desired folder:
 
 ```
 cd my-folder
-git clone https://github.com/JakariaJishan/calculator-react.git
+git clone https://github.com/JakariaJishan/book-store.git
 ```
 
 ### Install
@@ -111,7 +111,7 @@ git clone https://github.com/JakariaJishan/calculator-react.git
 To install this project:
 
 ```
-cd calculator-react
+cd book-store
 code .
 npm install
 ```

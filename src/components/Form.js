@@ -4,8 +4,8 @@ import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/books/booksSlice';
 
 function Form() {
-  const [title, setTitle] = useState({});
-  const [author, setAuthor] = useState({});
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {

@@ -5,7 +5,6 @@ import { deleteBook } from "../redux/books/booksSlice";
 function Book({ book }) {
   const displatch = useDispatch();
   const handleRemove = (id) => {
-    console.log(id);
     displatch(deleteBook(id));
   };
   return (

@@ -18,6 +18,9 @@ function Form() {
       category,
     };
     dispatch(addBook(newObj));
+
+    setAuthor('');
+    setTitle('');
   };
 
   return (
@@ -27,6 +30,7 @@ function Form() {
           type="text"
           name="title"
           required
+          value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="enter book title"
         />
@@ -34,12 +38,18 @@ function Form() {
           type="text"
           name="author"
           required
+          value={author}
           onChange={(e) => setAuthor(e.target.value)}
           placeholder="enter author name"
         />
 
-        <select defaultValue="Category" onChange={(e) => setCategory(e.target.value)}>
-          <option value="" hidden>Categories</option>
+        <select
+          defaultValue="Category"
+          onChange={(e) => setCategory(e.target.value)}
+        >
+          <option value="" hidden>
+            Categories
+          </option>
           <option value="Fiction">Fiction</option>
           <option value="Action">Action</option>
           <option value="Romance">Romance</option>

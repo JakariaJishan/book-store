@@ -9,9 +9,14 @@ function Book({ book }) {
   };
   return (
     <div>
-      {book.title}
-      {book.author}
-      <button type="button" onClick={() => handleRemove(book.id)}>remove</button>
+      <i>{book.category}</i>
+      <br />
+      <h2>{book.title}</h2>
+      <h5>{book.author}</h5>
+      <button type="button" onClick={() => handleRemove(book.id)}>
+        remove
+      </button>
+      <br />
     </div>
   );
 }

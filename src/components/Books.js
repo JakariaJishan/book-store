@@ -5,9 +5,12 @@ import Form from './Form';
 
 function Books() {
   const books = useSelector((state) => state.books.bookList);
+
   return (
     <div>
-      {books.map((book) => <Book key={book.author} book={book} />)}
+      {books.length !== 0
+        ? books.map((book) => <Book key={book.id} book={book} />)
+        : 'No Book Found'}
       <Form />
     </div>
   );

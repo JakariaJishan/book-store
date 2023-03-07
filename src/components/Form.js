@@ -14,6 +14,7 @@ function Form() {
       id: uuidv4(),
       title,
       author,
+      category: 'action'
     };
     dispatch(addBook(newObj));
   };

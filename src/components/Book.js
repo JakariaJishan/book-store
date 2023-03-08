@@ -1,19 +1,20 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
-import { deleteBook } from '../redux/books/booksSlice';
+import React from "react";
+import { useDispatch } from "react-redux";
 
 function Book({ book }) {
-  const displatch = useDispatch();
-  const handleRemove = (id) => {
-    displatch(deleteBook(id));
-  };
+  const dispatch = useDispatch();
+  const id = book[0];
+  const { author, title, category } = book[1][0];
+
+ 
+
   return (
     <div>
-      <i>{book.category}</i>
+      <i>{category}</i>
       <br />
-      <h2>{book.title}</h2>
-      <h5>{book.author}</h5>
-      <button type="button" onClick={() => handleRemove(book.id)}>
+      <h2>{title}</h2>
+      <h5>{author}</h5>
+      <button type="button" onClick={() => handleRemove(id)}>
         remove
       </button>
       <br />

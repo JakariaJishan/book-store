@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchBooks, postBooks } from "../redux/books/booksSlice";
+import { postBooks } from "../redux/books/booksSlice";
 
 function Form() {
   const [title, setTitle] = useState("");
@@ -27,9 +27,9 @@ function Form() {
     setTitle("");
   };
 
-  useEffect(() => {
-    dispatch(fetchBooks());
-  }, [handleSubmit]);
+  // useEffect(() => {
+  //   dispatch(fetchBooks());
+  // }, [handleSubmit]);
 
   return (
     <div>

@@ -26,11 +26,11 @@ export const postBooks = createAsyncThunk("books/postBooks", async (book) => {
 });
 
 export const deleteBooks = createAsyncThunk("books/deleteBooks", async (id) => {
-  const res = await fetch(URL_API + id, {
-    method: "DELETE",
-  });
-  const data = await res.json();
-  return data;
+  // const res = await fetch(URL_API + id, {
+  //   method: "DELETE",
+  // });
+  // const data = await res.json();
+  // return data;
 });
 
 export const booksSlice = createSlice({

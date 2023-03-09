@@ -31,40 +31,38 @@ function Book({ book }) {
         </div>
       </div>
       <div className={styles.secondPanel}>
-      <div className={styles.middleContent}>
-        <div className={styles.circle}>
-          <CircularProgressbar
-            value={randomValue}
-            styles={{
-              path: {
-                stroke: "#0290FF",
-                strokeLinecap: "butt",
-                transition: "stroke-dashoffset 0.5s ease 0s",
-                transform: "rotate(0.25turn)",
-                transformOrigin: "center center",
-              },
-              trail: {
-                stroke: "#d6d6d6",
-                strokeLinecap: "butt",
-                transform: "rotate(0.25turn)",
-                transformOrigin: "center center",
-              },
-            }}
-          />
-          
+        <div className={styles.middleContent}>
+          <div className={styles.circle}>
+            <CircularProgressbar
+              value={randomValue}
+              styles={{
+                path: {
+                  stroke: "#0290FF",
+                  strokeLinecap: "butt",
+                  transition: "stroke-dashoffset 0.5s ease 0s",
+                  transform: "rotate(0.25turn)",
+                  transformOrigin: "center center",
+                },
+                trail: {
+                  stroke: "#d6d6d6",
+                  strokeLinecap: "butt",
+                  transform: "rotate(0.25turn)",
+                  transformOrigin: "center center",
+                },
+              }}
+            />
+          </div>
+          <div>
+            <p className={styles.percent}>{randomValue}%</p>
+            <p className={styles.completed}>Completed</p>
+          </div>
         </div>
-        <div>
-          <p className={styles.percent}>{randomValue}%</p>
-          <p className={styles.completed}>Completed</p>
+        <div className={styles.endContent}>
+          <p>CURRENT CHAPTER</p>
+          <h3>Chapter 17</h3>
+          <button type="button">UPDATE PROGRESS</button>
         </div>
       </div>
-      <div className={styles.endContent}>
-        <p>CURRENT CHAPTER</p>
-        <h3>Chapter 17</h3>
-        <button type="button">UPDATE PROGRESS</button>
-      </div>
-      </div>
-      
     </div>
   );
 }

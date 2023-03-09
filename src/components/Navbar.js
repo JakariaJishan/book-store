@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from "../styles/Navbar.module.css";
 
 function Navbar() {
@@ -7,19 +7,35 @@ function Navbar() {
     <div className={styles.panelBg}>
       <div className={styles.innerPanel}>
         <div className={styles.mainPanel}>
-          <Link to="/" className={styles.branding}>
+          <NavLink to="/" className={styles.branding}>
             Bookstore CMS
-          </Link>
-          <Link to="/" className={styles.links}>
+          </NavLink>
+          <NavLink
+            to="/"
+            className={styles.links}
+            style={({ isActive, isPending }) => {
+              return {
+                opacity: isActive ? "1" : "0.5",
+              };
+            }}
+          >
             Books
-          </Link>
-          <Link to="/categories" className={styles.links}>
+          </NavLink>
+          <NavLink
+            to="/categories"
+            className={styles.links}
+            style={({ isActive, isPending }) => {
+              return {
+                opacity: isActive ? "1" : "0.5",
+              };
+            }}
+          >
             Categories
-          </Link>
+          </NavLink>
         </div>
-        <Link to="#">
+        <NavLink to="#">
           <img src="/user.png" />
-        </Link>
+        </NavLink>
       </div>
     </div>
   );

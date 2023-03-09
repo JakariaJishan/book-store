@@ -4,15 +4,20 @@ import Book from "./Book";
 import Form from "./Form";
 
 function Books() {
-  const books = useSelector((state) => state.books.bookList);
-
-
+  const books = useSelector((state) => state.books);
+  console.log(books.isLoading);
   return (
     <div>
       <Form />
-      {Object.entries(books).map((book, index) => (
-        <Book key={index} book={book} />
-      ))}
+      {books.isLoading && <h3>Loading books ...</h3>}
+      {!books.isLoading && books.errorMsg ? (
+        <h3>Error: {books.errorMsg}</h3>
+      ) : null}
+      {!books.isLoading && books.bookList
+        ? Object.entries(books.bookList).map((book, index) => (
+            <Book key={index} book={book} />
+          ))
+        : null}
     </div>
   );
 }

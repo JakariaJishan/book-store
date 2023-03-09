@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
 import { fetchBooks, postBooks } from "../redux/books/booksSlice";
 
@@ -8,7 +8,6 @@ function Form() {
   const [author, setAuthor] = useState("");
   const [category, setCategory] = useState("");
 
-  const books = useSelector((state) => state.books.bookList[0]);
   const dispatch = useDispatch();
 
   const id = "item" + uuidv4();

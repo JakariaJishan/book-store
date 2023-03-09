@@ -3,6 +3,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 const initialState = {
   bookList: [],
   isLoading: false,
+  errorMsg:''
 };
 
 const URL_API =
@@ -48,10 +49,12 @@ export const booksSlice = createSlice({
 
     builder.addCase(fetchBooks.fulfilled, (state, action) => {
       state.bookList = action.payload;
+      state.isLoading = false;
+      state.errorMsg = ''
     });
 
     builder.addCase(fetchBooks.rejected, (state, action) => {
-      console.log(action.error);
+      state.errorMsg = action.error.message
     });
   },
 });

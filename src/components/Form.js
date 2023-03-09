@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { fetchBooks, postBooks } from '../redux/books/booksSlice';
+import styles from '../styles/Form.module.css';
 
 function Form() {
   const [title, setTitle] = useState('');
@@ -28,7 +29,8 @@ function Form() {
   };
 
   return (
-    <div>
+    <div className={styles.panel}>
+      <h2>ADD NEW BOOK</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -36,7 +38,7 @@ function Form() {
           required
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          placeholder="enter book title"
+          placeholder="Book Title"
         />
         <input
           type="text"
@@ -44,7 +46,7 @@ function Form() {
           required
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
-          placeholder="enter author name"
+          placeholder="Enter Author"
         />
 
         <select
@@ -59,7 +61,7 @@ function Form() {
           <option value="Romance">Romance</option>
         </select>
 
-        <button type="submit">Add book</button>
+        <button type="submit">ADD BOOK</button>
       </form>
     </div>
   );

@@ -1,9 +1,9 @@
-import React from "react";
-import { CircularProgressbar } from "react-circular-progressbar";
-import "react-circular-progressbar/dist/styles.css";
-import { useDispatch } from "react-redux";
-import { deleteBooks, fetchBooks } from "../redux/books/booksSlice";
-import styles from "../styles/Book.module.css";
+import React from 'react';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+import { useDispatch } from 'react-redux';
+import { deleteBooks, fetchBooks } from '../redux/books/booksSlice';
+import styles from '../styles/Book.module.css';
 
 function Book({ book }) {
   const dispatch = useDispatch();
@@ -37,23 +37,26 @@ function Book({ book }) {
               value={randomValue}
               styles={{
                 path: {
-                  stroke: "#0290FF",
-                  strokeLinecap: "butt",
-                  transition: "stroke-dashoffset 0.5s ease 0s",
-                  transform: "rotate(0.25turn)",
-                  transformOrigin: "center center",
+                  stroke: '#0290FF',
+                  strokeLinecap: 'butt',
+                  transition: 'stroke-dashoffset 0.5s ease 0s',
+                  transform: 'rotate(0.25turn)',
+                  transformOrigin: 'center center',
                 },
                 trail: {
-                  stroke: "#d6d6d6",
-                  strokeLinecap: "butt",
-                  transform: "rotate(0.25turn)",
-                  transformOrigin: "center center",
+                  stroke: '#d6d6d6',
+                  strokeLinecap: 'butt',
+                  transform: 'rotate(0.25turn)',
+                  transformOrigin: 'center center',
                 },
               }}
             />
           </div>
           <div>
-            <p className={styles.percent}>{randomValue}%</p>
+            <p className={styles.percent}>
+              {randomValue}
+              %
+            </p>
             <p className={styles.completed}>Completed</p>
           </div>
         </div>

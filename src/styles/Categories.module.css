@@ -1,14 +1,14 @@
 .panel {
-    width: 80%;
-    margin: 5rem auto;
+  width: 80%;
+  margin: 5rem auto;
 }
 
 .panel button {
-    background: #0290ff;
-    padding: 0.5rem;
-    border-radius: 3px;
-    color: white;
-    border: none;
-    font-size: 0.8rem;
-    cursor: pointer;
+  background: #0290ff;
+  padding: 0.5rem;
+  border-radius: 3px;
+  color: white;
+  border: none;
+  font-size: 0.8rem;
+  cursor: pointer;
 }

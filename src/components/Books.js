@@ -1,8 +1,8 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React from 'react';
+import { useSelector } from 'react-redux';
 import styles from '../styles/Books.module.css';
-import Book from "./Book";
-import Form from "./Form";
+import Book from './Book';
+import Form from './Form';
 
 function Books() {
   const books = useSelector((state) => state.books);
@@ -18,8 +18,8 @@ function Books() {
         ) : null}
         {!books.isLoading && books.bookList
           ? Object.entries(books.bookList).map((book, index) => (
-              <Book key={Math.random()} book={book} />
-            ))
+            <Book key={Math.random()} book={book} />
+          ))
           : null}
       </div>
 

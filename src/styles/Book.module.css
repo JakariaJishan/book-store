@@ -1,98 +1,96 @@
 .panel {
-    background: white;
-    margin: 1em 0;
-    padding: 1em;
-    border: 1px solid #e8e8e8;
-    font-family: RobotoSlab;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background: white;
+  margin: 1em 0;
+  padding: 1em;
+  border: 1px solid #e8e8e8;
+  font-family: RobotoSlab, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .rootContent h5 {
-    color: #121212;
-    font-size: 0.8rem;
-    opacity: 0.5;
+  color: #121212;
+  font-size: 0.8rem;
+  opacity: 0.5;
 }
 
 .rootContent h2 {
-    font-size: 1.3rem;
-    line-height: 1.5;
+  font-size: 1.3rem;
+  line-height: 1.5;
 }
 
 .rootContent p {
-    font-size: 0.8rem;
-    color: #0290ff;
+  font-size: 0.8rem;
+  color: #0290ff;
 }
 
 .groupBtn {
-    margin: 1em 0;
+  margin: 1em 0;
 }
 
 .groupBtn button {
-    background-color: transparent;
-    border: none;
-    border-right: 1px solid #ddd;
-    padding-right: 1em;
-    margin-right: 1em;
-    color: #0290ff;
-    cursor: pointer;
-}
-
-.groupBtn button:last-child {
-    border: none;
-}
-
-.secondPanel {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 45%;
-}
-
-.middleContent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-    font-family: Montserrat;
-}
-
-.circle {
-    width: 4.25rem;
-    height: 4.25rem;
-}
-
-
-.percent {
-    font-size: 2rem;
-    color: #121212;
-}
-
-.completed {
-    color: #121212;
-    opacity: 0.5;
-    font-size: 0.8rem;
-}
-
-
-.endContent p {
-    font-size: 0.8rem;
-    color: #121212;
-    opacity: 0.5;
-}
-
-.endContent h3 {
-    font-size: 1rem;
-    margin: 6px 0 12px;
+  background-color: transparent;
+  border: none;
+  border-right: 1px solid #ddd;
+  padding-right: 1em;
+  margin-right: 1em;
+  color: #0290ff;
+  cursor: pointer;
 }
 
 .endContent button {
-    background: #0290ff;
-    padding: 0.5rem;
-    border-radius: 3px;
-    color: white;
-    border: none;
-    font-size: 0.8rem;
-    cursor: pointer;
+  background: #0290ff;
+  padding: 0.5rem;
+  border-radius: 3px;
+  color: white;
+  border: none;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.groupBtn button:last-child {
+  border: none;
+}
+
+.secondPanel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 45%;
+}
+
+.middleContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  font-family: Montserrat, sans-serif;
+}
+
+.circle {
+  width: 4.25rem;
+  height: 4.25rem;
+}
+
+.percent {
+  font-size: 2rem;
+  color: #121212;
+}
+
+.completed {
+  color: #121212;
+  opacity: 0.5;
+  font-size: 0.8rem;
+}
+
+.endContent p {
+  font-size: 0.8rem;
+  color: #121212;
+  opacity: 0.5;
+}
+
+.endContent h3 {
+  font-size: 1rem;
+  margin: 6px 0 12px;
 }

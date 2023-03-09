@@ -42,3 +42,27 @@
 .groupBtn button:last-child {
     border: none;
 }
+
+.middleContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    font-family: Montserrat;
+}
+
+.circle {
+    width: 4.25rem;
+    height: 4.25rem;
+}
+
+.percent {
+    font-size: 2rem;
+    color: #121212;
+}
+
+.completed {
+    color: #121212;
+    opacity: 0.5;
+    font-size: 0.8rem;
+}

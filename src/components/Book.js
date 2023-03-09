@@ -1,4 +1,6 @@
 import React from "react";
+import { CircularProgressbar } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
 import { useDispatch } from "react-redux";
 import { deleteBooks, fetchBooks } from "../redux/books/booksSlice";
 import styles from "../styles/Book.module.css";
@@ -11,6 +13,8 @@ function Book({ book }) {
   const handleRemove = (id) => {
     dispatch(deleteBooks(id)).then((res) => dispatch(fetchBooks()));
   };
+
+  const randomValue = Math.floor(Math.random() * 100);
 
   return (
     <div className={styles.panel}>
@@ -27,9 +31,13 @@ function Book({ book }) {
         </div>
       </div>
       <div className={styles.middleContent}>
-        <div className={styles.circle}></div>
-        <p>{Math.floor(Math.random() * 100)}%</p>
-        <p>Completed</p>
+        <div className={styles.circle}>
+          <CircularProgressbar value={randomValue} />;
+        </div>
+        <div>
+          <p className={styles.percent}>{randomValue}%</p>
+          <p className={styles.completed}>Completed</p>
+        </div>
       </div>
       <div className={styles.endContnet}>
         <p>CURRENT CHAPTER</p>

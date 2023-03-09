@@ -4,13 +4,21 @@ import Book from './Book';
 import Form from './Form';
 
 function Books() {
-  const books = useSelector((state) => state.books.bookList);
-
+  const books = useSelector((state) => state.books);
   return (
     <div>
-      {books.length !== 0
-        ? books.map((book) => <Book key={book.id} book={book} />)
-        : 'No Book Found'}
+      {books.isLoading && <h3>Loading books ...</h3>}
+      {!books.isLoading && books.errorMsg ? (
+        <h3>
+          Error:
+          {books.errorMsg}
+        </h3>
+      ) : null}
+      {!books.isLoading && books.bookList
+        ? Object.entries(books.bookList).map((book, index) => (
+          <Book key={Math.random()} book={book} />
+        ))
+        : null}
       <Form />
     </div>
   );

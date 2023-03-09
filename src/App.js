@@ -1,19 +1,18 @@
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { Route, Routes } from "react-router-dom";
-import "./App.css";
-import Books from "./components/Books";
-import Categories from "./components/Categories";
-import Layouts from "./components/Layouts";
-import { fetchBooks } from "./redux/books/booksSlice";
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { Route, Routes } from 'react-router-dom';
+import './App.css';
+import Books from './components/Books';
+import Categories from './components/Categories';
+import Layouts from './components/Layouts';
+import { fetchBooks } from './redux/books/booksSlice';
 
 function App() {
-
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchBooks());
-  }, []);
-  
+  }, [dispatch]);
+
   return (
     <>
       <Routes>

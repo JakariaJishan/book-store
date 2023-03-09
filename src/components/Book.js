@@ -1,6 +1,6 @@
-import React from "react";
-import { useDispatch } from "react-redux";
-import { deleteBooks, fetchBooks } from "../redux/books/booksSlice";
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { deleteBooks, fetchBooks } from '../redux/books/booksSlice';
 
 function Book({ book }) {
   const dispatch = useDispatch();
@@ -8,8 +8,7 @@ function Book({ book }) {
   const { author, title, category } = book[1][0];
 
   const handleRemove = (id) => {
-    dispatch(deleteBooks(id)).then(res => dispatch(fetchBooks())) ;
-    
+    dispatch(deleteBooks(id)).then((res) => dispatch(fetchBooks()));
   };
 
   return (

@@ -1,9 +1,14 @@
 .panelBg {
+    background-color: #fff;
+}
+
+.innerPanel {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
-    padding: 1em 2em;
+    padding: 1.5em 0;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .branding {
@@ -30,4 +35,29 @@
     font-family: Montserrat;
     margin-right: 1em;
     color: #121212;
+}
+
+img {
+    opacity: 0.5;
+}
+
+
+
+@media only screen and (max-width: 992px) {
+    .branding {
+        font-size: 1.5rem;
+    }
+
+    .mainPanel {
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+
+    .innerPanel {
+        flex-wrap: wrap;
+    }
+
+    img {
+        margin: 10px 0;
+    }
 }

@@ -1,0 +1,44 @@
+.panel {
+    background: white;
+    margin: 1em 0;
+    padding: 1em;
+    border: 1px solid #e8e8e8;
+    font-family: RobotoSlab;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rootContent h5 {
+    color: #121212;
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
+
+.rootContent h2 {
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+.rootContent p {
+    font-size: 0.8rem;
+    color: #4386bf;
+}
+
+.groupBtn {
+    margin: 1em 0;
+}
+
+.groupBtn button {
+    background-color: transparent;
+    border: none;
+    border-right: 1px solid #ddd;
+    padding-right: 1em;
+    margin-right: 1em;
+    color: #4386bf;
+    cursor: pointer;
+}
+
+.groupBtn button:last-child {
+    border: none;
+}

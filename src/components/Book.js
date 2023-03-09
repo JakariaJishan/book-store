@@ -1,6 +1,7 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
-import { deleteBooks, fetchBooks } from '../redux/books/booksSlice';
+import React from "react";
+import { useDispatch } from "react-redux";
+import { deleteBooks, fetchBooks } from "../redux/books/booksSlice";
+import styles from "../styles/Book.module.css";
 
 function Book({ book }) {
   const dispatch = useDispatch();
@@ -12,15 +13,29 @@ function Book({ book }) {
   };
 
   return (
-    <div>
-      <i>{category}</i>
-      <br />
-      <h2>{title}</h2>
-      <h5>{author}</h5>
-      <button type="button" onClick={() => handleRemove(id)}>
-        remove
-      </button>
-      <br />
+    <div className={styles.panel}>
+      <div className={styles.rootContent}>
+        <h5>{category}</h5>
+        <h2>{title}</h2>
+        <p>{author}</p>
+        <div className={styles.groupBtn}>
+          <button type="button">Comments</button>
+          <button type="button" onClick={() => handleRemove(id)}>
+            Remove
+          </button>
+          <button type="button">Edit</button>
+        </div>
+      </div>
+      <div className={styles.middleContent}>
+        <div className={styles.circle}></div>
+        <p>{Math.floor(Math.random() * 100)}%</p>
+        <p>Completed</p>
+      </div>
+      <div className={styles.endContnet}>
+        <p>CURRENT CHAPTER</p>
+        <p>Chapter 17</p>
+        <button type="button">UPDATE PROGRESS</button>
+      </div>
     </div>
   );
 }

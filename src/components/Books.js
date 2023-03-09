@@ -1,23 +1,18 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchBooks } from "../redux/books/booksSlice";
+import React from "react";
+import { useSelector } from "react-redux";
 import Book from "./Book";
 import Form from "./Form";
 
 function Books() {
-  const books = useSelector((state) => state.books.bookList[0]);
-  const dispatch = useDispatch();
+  const books = useSelector((state) => state.books.bookList);
 
-  useEffect(() => {
-    dispatch(fetchBooks());
-  }, []);
 
   return (
     <div>
+      <Form />
       {Object.entries(books).map((book, index) => (
         <Book key={index} book={book} />
       ))}
-      <Form />
     </div>
   );
 }

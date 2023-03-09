@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { postBooks } from "../redux/books/booksSlice";
+import { v4 as uuidv4 } from "uuid";
+import { fetchBooks, postBooks } from "../redux/books/booksSlice";
 
 function Form() {
   const [title, setTitle] = useState("");
@@ -10,7 +11,7 @@ function Form() {
   const books = useSelector((state) => state.books.bookList[0]);
   const dispatch = useDispatch();
 
-  const id = "item" + (Object.entries(books).length + 1);
+  const id = "item" + uuidv4();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,15 +22,11 @@ function Form() {
       category,
     };
 
-    dispatch(postBooks(newObj));
+    dispatch(postBooks(newObj)).then((res) => dispatch(fetchBooks()));
 
     setAuthor("");
     setTitle("");
   };
-
-  // useEffect(() => {
-  //   dispatch(fetchBooks());
-  // }, [handleSubmit]);
 
   return (
     <div>

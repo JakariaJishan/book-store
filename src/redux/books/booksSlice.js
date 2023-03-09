@@ -1,11 +1,12 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  bookList: [{}],
+  bookList: [],
+  isLoading: false,
 };
 
 const URL_API =
-  "https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/kTk9Re5A72zBRgGfkQp7/books";
+  "https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/FfL4RPvLbK9C05U1RUvp/books/";
 
 export const fetchBooks = createAsyncThunk("books/fetchBooks", async () => {
   const res = await fetch(URL_API);
@@ -14,6 +15,7 @@ export const fetchBooks = createAsyncThunk("books/fetchBooks", async () => {
 });
 
 export const postBooks = createAsyncThunk("books/postBooks", async (book) => {
+  console.log(URL_API);
   const res = await fetch(URL_API, {
     method: "POST",
     headers: {
@@ -21,43 +23,35 @@ export const postBooks = createAsyncThunk("books/postBooks", async (book) => {
     },
     body: JSON.stringify(book),
   });
-  const data = await res.json();
-  return data;
+  return JSON.stringify(res);
 });
 
 export const deleteBooks = createAsyncThunk("books/deleteBooks", async (id) => {
-  // const res = await fetch(URL_API + id, {
-  //   method: "DELETE",
-  // });
-  // const data = await res.json();
-  // return data;
+  const res = await fetch(URL_API + id, {
+    method: "DELETE",
+  });
+  return JSON.stringify(res);
 });
 
 export const booksSlice = createSlice({
   name: "books",
   initialState,
-  reducers: {
-    addBook: (state, action) => {
-      state.bookList.push(action.payload);
-    },
-    deleteBook: (state, action) => {
-      state.bookList = state.bookList.filter(
-        (book) => book.id !== action.payload
-      );
-    },
-  },
+  reducers: {},
 
   extraReducers: (builder) => {
-    builder.addCase(fetchBooks.pending, (state, action) => {});
+    builder.addCase(fetchBooks.pending, (state, action) => {
+      return {
+        ...state,
+        isLoading: true,
+      };
+    });
 
     builder.addCase(fetchBooks.fulfilled, (state, action) => {
-      Object.entries(action.payload).forEach(([key, value]) => {
-        state.bookList[0][key] = value;
-      });
+      state.bookList = action.payload;
     });
 
     builder.addCase(fetchBooks.rejected, (state, action) => {
-      console.log(action.error.message);
+      console.log(action.error);
     });
   },
 });

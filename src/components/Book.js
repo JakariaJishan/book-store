@@ -30,6 +30,7 @@ function Book({ book }) {
           <button type="button">Edit</button>
         </div>
       </div>
+      <div className={styles.secondPanel}>
       <div className={styles.middleContent}>
         <div className={styles.circle}>
           <CircularProgressbar
@@ -50,7 +51,7 @@ function Book({ book }) {
               },
             }}
           />
-          ;
+          
         </div>
         <div>
           <p className={styles.percent}>{randomValue}%</p>
@@ -62,6 +63,8 @@ function Book({ book }) {
         <h3>Chapter 17</h3>
         <button type="button">UPDATE PROGRESS</button>
       </div>
+      </div>
+      
     </div>
   );
 }

@@ -43,6 +43,13 @@
     border: none;
 }
 
+.secondPanel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 45%;
+}
+
 .middleContent {
     display: flex;
     justify-content: center;

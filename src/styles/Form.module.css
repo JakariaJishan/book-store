@@ -1,0 +1,55 @@
+.panel h2 {
+  opacity: 0.2;
+  color: black;
+  font-size: 1.25rem;
+  margin: 40px 0 10px;
+}
+
+.panel form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+
+.panel form input {
+  padding: 8px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  width: 100%;
+}
+
+.panel form input::placeholder {
+  color: #c4c4c4;
+}
+
+.panel form select {
+  padding: 8px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  width: 50%;
+  color: #c4c4c4;
+}
+
+.panel form button {
+  background: #0290ff;
+  padding: 0.5rem;
+  border-radius: 3px;
+  color: white;
+  border: none;
+  font-size: 0.8rem;
+  cursor: pointer;
+  width: 30%;
+}
+
+@media only screen and (max-width: 992px) {
+  .panel form {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .panel form input,
+  .panel form select {
+    width: 100%;
+  }
+}

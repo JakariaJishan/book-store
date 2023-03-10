@@ -2,7 +2,8 @@
 
 <div align="center">
    <h1><b>Book store</b></h1>
-  <!-- <img src="./src/assets/readme_img.png" alt="book store image" width="100%" /> -->
+  <img src="https://user-images.githubusercontent.com/73704727/224333403-f235b36b-5d02-4560-b258-eca41ba0e320.png" alt="book store image" width="100%" />
+
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -78,7 +79,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [under_construction](under_construction)
+- [LIVE DEMO](https://react-book-store-v0z2.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
